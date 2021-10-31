@@ -47,7 +47,7 @@ const mostrarProductos = () => {
 
 
 
-// Codigo aa reformar para cambiar a dom y sort para la entrega anterior
+// Codigo a reformar para cambiar a dom y sort para la entrega anterior
 
 // let container = document.createElement("div");
 /* for (const producto of productos) {
