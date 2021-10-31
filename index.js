@@ -66,3 +66,5 @@ for (producto of MaxPriceFilter) {
   alert(producto.id + div + producto.producto + div + producto.precio);
 }
 */
+
+// Test
