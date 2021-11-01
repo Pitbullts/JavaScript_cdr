@@ -69,10 +69,10 @@ const mostrarProductos = () => {
 // Nota para mañana: falta que se pinte el html denuevo
 function respuestaClick() {
     let productosordenados = productos.sort ((a, b) => {
-    if (a.precio > b.precio) {
+    if (a.precio < b.precio) {
       return -1;
     }
-    if (a.precio < b.precio) {
+    if (a.precio > b.precio) {
       return 1;
     }
     return 0;
