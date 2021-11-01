@@ -7,7 +7,7 @@ const productos = [
   { id: 5, producto: "Core I5 10400", precio: 22100 },
   { id: 6, producto: "Core I7 10700", precio: 48500 },
 ];
-let sumaID = productos.length + 1;
+/* let sumaID = productos.length + 1;
 let newProduct = prompt("Añade un nuevo producto");
 let PriceNewProduct = parseInt(prompt("Añade un precio a " + newProduct));
 let ArrayNew = productos.push({
@@ -18,11 +18,11 @@ let ArrayNew = productos.push({
 
 alert("Lista de productos:");
 alert("Total de productos: " + sumaID);
-
+*/
 const mostrarProductos = () => {
-  for (const producto of productos){
-      let contenedor = document.createElement("div");
-      contenedor.innerHTML = 
+  for (const producto of productos) {
+    let contenedor = document.createElement("div");
+    contenedor.innerHTML =
       `
           <div class="card">
               <div class="card-body">
@@ -34,8 +34,8 @@ const mostrarProductos = () => {
           </div>
              
       `
-      document.getElementById('fila').appendChild(contenedor);
-    
+    document.getElementById('fila').appendChild(contenedor);
+
   }
 }
 
@@ -57,16 +57,64 @@ const mostrarProductos = () => {
                             <b>$ ${producto.precio}</b>;
     document.body.appendChild(container);
 }
-/*  
-let MaxPrice = parseInt(prompt("Inserte el precio maximo"));
-const MaxPriceFilter = productos.filter(
-  (producto) => producto.precio < MaxPrice
-);
-for (producto of MaxPriceFilter) {
-  alert(producto.id + div + producto.producto + div + producto.precio);
-}
+
+        let MaxPrice = parseInt(prompt("Inserte el precio maximo"));
+        const MaxPriceFilter = productos.sort(
+          (producto) => producto.precio < MaxPrice
+        );
+        for (producto of MaxPriceFilter) {
+          alert(producto.id + div + producto.producto + div + producto.precio);
+        }
 */
 
-// Test2
+function respuestaClick() {
+    let productosordenados = productos.sort ((a, b) => {
+    if (a.precio > b.precio) {
+      return -1;
+    }
+    if (a.precio < b.precio) {
+      return 1;
+    }
+    return 0;
+  });
+  
+  return(productosordenados);
 
-// test3
+}
+
+function dosunidas() {
+  respuestaClick();
+  pintada();
+}
+
+const saludar = () => {
+  alert("hola")
+}
+
+
+// let btnExpensive = document.getElementById("btnExpensive").addEventListener("click",respuestaClick)
+
+//console.log(respuestaClick)
+/* 
+
+let btnExpensive = document.getElementById("expensivebtn")
+  btnExpensive.onclick = () =>{
+    productos.sort((a, b) => {
+      if (a.precio > b.precio) {
+        return -1;
+      }
+      if (a.precio < b.precio) {
+        return 1;
+      }
+      return 0;
+    });
+  } 
+
+  */
+
+  window.onload = function() {
+    mostrarProductos();
+    let btnExpensive = document.getElementById("expensivebtn")
+    btnExpensive.addEventListener("click",dosunidas,true);
+
+  };
