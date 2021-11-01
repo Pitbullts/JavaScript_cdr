@@ -66,7 +66,7 @@ const mostrarProductos = () => {
           alert(producto.id + div + producto.producto + div + producto.precio);
         }
 */
-
+// Nota para mañana: falta que se pinte el html denuevo
 function respuestaClick() {
     let productosordenados = productos.sort ((a, b) => {
     if (a.precio > b.precio) {
@@ -84,7 +84,7 @@ function respuestaClick() {
 
 function dosunidas() {
   respuestaClick();
-  pintada();
+  mostrarProductos();
 }
 
 const saludar = () => {
