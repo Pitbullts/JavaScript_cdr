@@ -1,11 +1,11 @@
 const div = ": ";
 const productos = [
-  { id: 1, producto: "GTX 1660 Super", precio: 97000 },
-  { id: 2, producto: "RTX 3060 12GB", precio: 110362 },
-  { id: 3, producto: "RTX 3060ti 8GB", precio: 156000 },
-  { id: 4, producto: "Core I3 10100", precio: 12500 },
-  { id: 5, producto: "Core I5 10400", precio: 22100 },
-  { id: 6, producto: "Core I7 10700", precio: 48500 },
+  { id: 1, producto: "Cafe Americano", precio: 190 },
+  { id: 2, producto: "Cafe Expresso", precio: 160 },
+  { id: 3, producto: "Cafe Latte", precio: 200 },
+  { id: 4, producto: "Cafe Cappuccino", precio: 160 },
+  { id: 5, producto: "Cafe Cortado", precio: 150 },
+  { id: 6, producto: "Cafe Black", precio: 130 },
 ];
 /* 
 let sumaID = productos.length + 1;
