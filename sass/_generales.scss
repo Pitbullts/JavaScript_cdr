@@ -1,0 +1,35 @@
+/* Generales */ 
+a {
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+.hover {
+    color: white;
+    transition: 0.5s;
+}
+.hover:hover {
+    background-color: var(--primario);
+    color: var(--oscuro);
+    border-radius: 1rem;
+}
+
+/* Formulario */
+
+input,label, select {
+    border-radius: 30px;
+    padding: 1rem;
+}
+
+/* Tabla Puestos */ 
+table {
+    margin: 5rem 5rem auto;
+    border: var(--blanco);
+}
+tr,th{
+        font-size: 2rem;
+        color: var(--blanco);
+        text-align: center;
+        padding: 1rem;
+        border-spacing: 1rem;
+}

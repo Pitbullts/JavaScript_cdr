@@ -1,0 +1,46 @@
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+    --grisclaro: #DFE9F3;
+}
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;600;700&display=swap'); /* font-family: 'Oswald', sans-serif; */ 
+
+// Pages
+@import "index";
+@import "contacto";
+@import "dndpuestos";
+@import "beneficios";
+@import "somos";
+@import "errores";
+
+// Modulos
+@import "navbar";
+@import "responsive";
+@import "popup";
+
+// Variables
+@import "generales";
+@import "estilizadores";
+@import "imagenes";
+
+$asdd: 2rem, center;
+
+
+html {
+    font-size: 62.5%;
+}
+body {  /* 1 rem = 10px */
+    font-size: 16px;
+    background-color: var(--oscuro);
+    font-family: 'Oswald', sans-serif;
+}
+
+
+
+
+
+
+

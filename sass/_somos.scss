@@ -1,0 +1,45 @@
+/* ¿Quienes somos */
+
+
+
+.contentsomos {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin: 5px;
+}
+
+.izqsomos {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.izqsomostext {
+    display: flex;
+    flex-direction: column;
+}
+
+.IzqSomosImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+}
+.derecha-somos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.ImgPersonas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+}

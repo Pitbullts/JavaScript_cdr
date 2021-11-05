@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zona de contacto de tienda de cafe, cafeteria The Coffe Store">
+    <meta name="keywords" content="CAFE, CAFETERIA, DESAYUNO, MERIENDA, COFFE, TOMAR, COMER, BEBER, BUENOS AIRES, Contacto, Informacion">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="preload" href="../css/normalize.css" as="style">
+    <link rel="preload" href="..css/styles2.css" as="style">
+    <link href="../css/styles2.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../img/logosup.png">
+</head>
+<body>
+    <header class="center">
+        <div class="nav-bg"">
+            <nav class="NavPrincipal contenedor">
+               <a href="../index.html"><img src="../img/logosup.png" alt="logosup"></a>
+                    <a class="hover" href="../index.html">Home</a>
+                    <a class="hover" href="somos.html">¿Quienes Somos?</a>
+                    <a class="hover" href="contacto.html">Contactanos</a>
+                    <a class="hover" href="puestos.html">¿Donde estaremos?</a>
+                    <a class="hover" href="#popup1">Medidas Sanitarias</a>
+                    <div id="popup1" class="popup-overlay">
+                        <div class="popup">
+                                  <h2 class="center">Nuestras medidas sanitarias</h2>
+                                  <a class="close" href="#">&times;</a>
+                                    <div class="content">
+                                        <ul>
+                                                <h3>Locales:</h2>
+                                            <li>2m entre cada persona</li>
+                                            <li>Un solo miembro grupo/familia a la fila</li>
+                                            <li>Espacio entre mesas (una de cada dos mesas cerradas)</li>
+                                            <li>Alcohol y toma de temperatura en la entrada</li>
+                                                <br>
+                                                <h3>Puestos de comida:</h2>
+                                            <li>2m de disancia entre cada persona</li>
+                                            <li>Un solo miembro del grupo/familia en la fila</li>
+                                            <li>Tapabocas en uso activo hasta llegar a las mesas</li> 
+                                            <li>Toma de temperatura antes de realizar tu pedido</li>                                          
+                                         </ul>
+                          </div>
+                        </div>
+                      </div>
+                        <div class="icons-redes ">
+                            <a class="redes" href="https://twitter.com">  <img class="hover redes-hover" src="../img/twtlogobg.png" alt="twtlogo"></a>
+                            <a class="redes" href="https://facebook.com"> <img class="hover redes-hover" src="../img/fblogobg.png" alt="fblogo"></a>
+                            <a class="redes" href="https://instagram.com"><img class="hover redes-hover" src="../img/iglogobg.png" alt="iglogo"></a>
+                        </div>  
+            </nav>
+        </div>
+    </header>
+    <section class="grid-contact FormText center">
+        <h1 class="center TxtMain">¡Contactanos!</h1>
+        <form action="" method="POST" enctype="text/plain">
+            <fieldset class="border grid-field-set">
+                <h1 class="form-newsl">Datos personales</h1>
+            <div class="contenido-contacto">
+                    <label for="nombre">Nombre y Apellido</label>
+                    <input type="text" name="nombre" placeholder="Su Nombre + Apellido" required>
+                    <br>
+                <label for="email">Correo Electronico</label>
+                    <input for="email" type="mail" placeholder="nombre@ejemplo.com" required>
+                    <br>
+                <label for="numb">Numero de contacto</label>
+                    <input for="numb" type="number" placeholder="Su numero de telefono">
+                <div>
+                    <fieldset>
+                        <legend class="form-newsl">Area de contacto</legend>
+                    <select name="areas">
+                            <option value="Comercial">Comercial</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Colaboraciones">Colaboraciones</option>
+                            <option value="Reclamos">Reclamos</option>
+                    </select>
+                    </fieldset>
+                <div>
+                        <label for="acepta" class="form-newsl">Aceptar terminos y condiciones</label>
+                        <input type="checkbox" name="acepta" value="Aceptar" required>
+                </div>
+                    <div>
+                        <input type="reset" value="Limpiar formulario">
+                        <br>
+                        <input type="submit" value="Enviar formulario">
+                  </div>
+            </div>      
+            </fieldset>
+            <footer class="border">
+                <p class="FormText center">Lucas Sarlija - Curso Desarrollo Web Coderhouse - 2021 - Fake Page</p>
+</body>
+</html>

@@ -1,0 +1,40 @@
+/* Contenido ITEM2 & ITEM3 - Index*/
+.grid-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    grid-template-areas: "a b a b";
+    grid-auto-flow: column;
+}
+
+
+/* Item2 ¿Donde Estamos */
+.item2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+    justify-content: center;
+}
+
+.field-index {
+    border-style: none;
+}
+/* Item3 NewSletter */ 
+.item3-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item3 {
+    display: grid; 
+}
+
+.newsl2 {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+    grid-auto-flow: row;
+}
+.label-correo,.label-nombre {
+    font-size: 3rem;
+}

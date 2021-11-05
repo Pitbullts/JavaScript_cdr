@@ -1,0 +1,39 @@
+
+/* Extends */
+.error-400-style1 {
+    @extend .TxtMain,.center;
+    font-weight: bolder;
+}
+
+.error-400-style2 {
+    @extend .form-newsl,.FontBnc,.center;
+    font-weight: bolder;
+}
+
+/* Maps */
+$redes-escritas: (
+    twitter: #00acee,
+    facebook: #3b5998,
+    instagram: #30618A,
+);
+
+.social-medias-text {
+    @extend .error-400-style2 
+};
+
+/* Each + Maps */ 
+@each $redes-colores, $FontColor in $redes-escritas {
+    .social-medias-text--#{$redes-colores} {
+        color: $FontColor;
+    }  
+}
+
+.social-medias-text--twitter:hover {
+    font-size: 4rem;
+}
+.social-medias-text--facebook:hover {
+    font-size: 4rem;
+}
+.social-medias-text--instagram:hover {
+    font-size: 4rem;
+}

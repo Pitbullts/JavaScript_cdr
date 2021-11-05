@@ -1,0 +1,365 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;600;700&display=swap");
+:root {
+  --blanco: #ffffff;
+  --oscuro: #212121;
+  --primario: #FFC107;
+  --secundario: #0097A7;
+  --gris: #757575;
+  --grisclaro: #DFE9F3; }
+
+/* font-family: 'Oswald', sans-serif; */
+/* Contenido ITEM2 & ITEM3 - Index*/
+.grid-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+  grid-template-areas: "a b a b";
+  grid-auto-flow: column; }
+
+/* Item2 ¿Donde Estamos */
+.item2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / -1;
+  justify-content: center; }
+
+.field-index {
+  border-style: none; }
+
+/* Item3 NewSletter */
+.item3-title {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.item3 {
+  display: grid; }
+
+.newsl2 {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1rem;
+  grid-auto-flow: row; }
+
+.label-correo, .label-nombre {
+  font-size: 3rem; }
+
+/* CONTACTO */
+.grid-field-set {
+  display: grid;
+  margin: 1rem; }
+
+.grid-contact {
+  display: grid;
+  align-items: center;
+  justify-content: center; }
+
+.contenido-contacto {
+  display: grid;
+  flex-direction: row;
+  padding: 1rem; }
+
+.borderlegend {
+  border-style: none; }
+
+/* Donde Estamos Puestos .html */
+.DondeEstamosPuestosHTML {
+  display: grid;
+  border-style: solid;
+  padding: 1rem; }
+
+/* Beneficios.html */
+.contentbeneficios {
+  display: grid; }
+
+.contentbeneficios ul {
+  list-style-type: square; }
+
+/* ¿Quienes somos */
+.contentsomos {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin: 5px; }
+
+.izqsomos {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem; }
+
+.izqsomostext {
+  display: flex;
+  flex-direction: column; }
+
+.IzqSomosImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  padding: 1rem; }
+
+.derecha-somos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; }
+
+.ImgPersonas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  padding: 1rem; }
+
+/* Extends */
+.error-400-style1 {
+  font-weight: bolder; }
+
+.error-400-style2, .social-medias-text {
+  font-weight: bolder; }
+
+/* Maps */
+/* Each + Maps */
+.social-medias-text--twitter {
+  color: #00acee; }
+
+.social-medias-text--facebook {
+  color: #3b5998; }
+
+.social-medias-text--instagram {
+  color: #30618A; }
+
+.social-medias-text--twitter:hover {
+  font-size: 4rem; }
+
+.social-medias-text--facebook:hover {
+  font-size: 4rem; }
+
+.social-medias-text--instagram:hover {
+  font-size: 4rem; }
+
+/*  --------------- Nav Bar  --------------- */
+.nav-bg {
+  background-color: var(--secundario);
+  width: 100%; }
+
+.NavPrincipal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; }
+
+.NavPrincipal a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 1rem; }
+
+.redes-hover:hover {
+  width: 5rem;
+  height: 5rem; }
+
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto; }
+
+/* NavBar  ----RESPONSIVE------ */
+@media (min-width: 1280px) {
+  .NavPrincipal {
+    flex-direction: row;
+    justify-content: space-between; } }
+
+@media (max-width: 1279px) {
+  .NavPrincipal {
+    flex-direction: column;
+    justify-content: space-between; } }
+
+/* Contenido ITEM 1  ¿Que hacemos? - Index ----RESPONSIVE------*/
+@media (min-width: 1280px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem; }
+  .griditem1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2; }
+  .grid-item-2 {
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 3rem; } }
+
+/* Contenido ITEM2 & ITEM3 - Index  ----RESPONSIVE------ */
+@media (max-width: 768px) {
+  .gridmain {
+    display: flex;
+    flex-direction: column; }
+  .api-google {
+    width: 50%;
+    height: 50%; } }
+
+/* Responsive Page Somos */
+@media (max-width: 1280px) {
+  .contentsomos {
+    display: flex;
+    flex-direction: column; } }
+
+@media (max-width: 900px) {
+  .ImgPersonas, .izqsomosimg {
+    width: 100%;
+    height: auto;
+    object-fit: contain; } }
+
+.derecha-responsive {
+  display: flex;
+  flex-direction: column; }
+
+@media (min-width: 901px) {
+  .ImgPersonas {
+    width: 100%;
+    height: aut;
+    object-fit: contain; } }
+
+/* PopUp */
+@media (max-width: 395px) {
+  .popup {
+    width: 100%;
+    height: auto; } }
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0; }
+  .popup-overlay:target {
+    visibility: visible;
+    opacity: 1; }
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  z-index: 1; }
+  .popup h2 {
+    margin-top: 0; }
+  .popup .close {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    transition: all 200ms;
+    font-size: 4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333; }
+    .popup .close:hover {
+      color: #d80606; }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto; }
+
+.alert {
+  z-index: -1; }
+
+/* Generales */
+a {
+  color: var(--blanco);
+  text-decoration: none; }
+
+.hover {
+  color: white;
+  transition: 0.5s; }
+
+.hover:hover {
+  background-color: var(--primario);
+  color: var(--oscuro);
+  border-radius: 1rem; }
+
+/* Formulario */
+input, label, select {
+  border-radius: 30px;
+  padding: 1rem; }
+
+/* Tabla Puestos */
+table {
+  margin: 5rem 5rem auto;
+  border: var(--blanco); }
+
+tr, th {
+  font-size: 2rem;
+  color: var(--blanco);
+  text-align: center;
+  padding: 1rem;
+  border-spacing: 1rem; }
+
+/*  ---------------Estilizadores de texto reutilizables  */
+.center, .error-400-style1, .error-400-style2, .social-medias-text {
+  text-align: center; }
+
+.TxtMain, .error-400-style1 {
+  color: var(--blanco);
+  font-size: 5rem; }
+
+.form-newsl, .error-400-style2, .social-medias-text {
+  /* titulos blancos tam mediano */
+  color: var(--blanco);
+  font-size: 3rem; }
+
+.FormText {
+  font-size: 2rem;
+  color: var(--blanco); }
+
+.FontBnc, .error-400-style2, .social-medias-text {
+  /* Fuente negrita clase global */
+  font-weight: bold; }
+
+.justify {
+  justify-content: left; }
+
+.border {
+  border: solid #ffffff; }
+
+.margin {
+  margin: 1rem; }
+
+.centergrid {
+  display: grid;
+  justify-content: center;
+  align-items: center; }
+
+/* --------------- IMG   ---------------          */
+.bgcoffeimg {
+  display: block;
+  size: auto;
+  margin: auto; }
+
+.icons-redes {
+  color: var(--blanco); }
+
+.coffe-img {
+  width: 100%;
+  height: 60rem; }
+
+.api-google {
+  width: 100%;
+  height: auto; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  /* 1 rem = 10px */
+  font-size: 16px;
+  background-color: var(--oscuro);
+  font-family: 'Oswald', sans-serif; }

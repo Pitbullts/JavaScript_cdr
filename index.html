@@ -1,46 +1,104 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 6</title>
-
-    <link href="css/styles.css" rel="Stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+    <meta name="description" content="Tienda especializada en cafe, una cafeteria donde podras merendar, desayunar, tomar algo, un snack.">
+    <meta name="keywords" content="CAFE, CAFETERIA, DESAYUNO, MERIENDA, COFFE, TOMAR, COMER, BEBER, BUENOS AIRES">
+    <title>The Coffe Store</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="preload" href="css/styles2.css" as="style">
+    <link href="css/styles2.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/logosup.png">
 </head>
 <body>
-    <h1 class="center">Galeria de productos</h1>
-    <div>
-        <h2 class="center">Productos</h2>
-        <div>
-            <div>
-                <div class="row" id="fila">
-            </div>
+    <header>
+        <div class="nav-bg"">
+            <nav class="NavPrincipal contenedor">
+               <a href="index.html"><img src="./img/logosup.png" alt="logosup"></a>
+                    <a class="hover" href="index.html">Home</a>
+                    <a class="hover" href="pages/somos.html">¿Quienes Somos?</a>
+                    <a class="hover" href=" pages/contacto.html">Contactanos</a>
+                    <a class="hover" href="pages/puestos.html">¿Donde estaremos?</a>
+                    <a class="hover" href="#popup1">Medidas Sanitarias</a>
+                    <div id="popup1" class="popup-overlay">
+                        <div class="popup">
+                                  <h2 class="center">Nuestras medidas sanitarias</h2>
+                                  <a class="close" href="#">&times;</a>
+                                    <div class="content">
+                                        <ul>
+                                                <h3>Locales:</h2>
+                                            <li>2m entre cada persona</li>
+                                            <li>Un solo miembro grupo/familia a la fila</li>
+                                            <li>Espacio entre mesas (una de cada dos mesas cerradas)</li>
+                                            <li>Alcohol y toma de temperatura en la entrada</li>
+                                                <br>
+                                                <h3>Puestos de comida:</h2>
+                                            <li>2m de disancia entre cada persona</li>
+                                            <li>Un solo miembro del grupo/familia en la fila</li>
+                                            <li>Tapabocas en uso activo hasta llegar a las mesas</li> 
+                                            <li>Toma de temperatura antes de realizar tu pedido</li>                                          
+                                         </ul>
+                          </div>
+                        </div>
+                      </div>
+                        <div class="icons-redes">
+                            <a class="redes" href="https://twitter.com">  <img class="hover redes-hover" src="./img/twtlogobg.png" alt="twtlogo"></a>
+                            <a class="redes" href="https://facebook.com"> <img class="hover redes-hover" src="./img/fblogobg.png" alt="fblogo"></a>
+                            <a class="redes" href="https://instagram.com"><img class="hover redes-hover" src="./img/iglogobg.png" alt="iglogo"></a>
+                        </div>  
+            </nav>
         </div>
-
-    <aside>
-        <h3>Filtrar</h2>
+    </header>
+            <h1 class="center TxtMain">The Coffe Store</h1>
+            <h3 class="form-newsl center">¿Que hacemos?</h3>
+        <section class="grid-container">
             <div>
-                <button id="expensivebtn">Mayor precio</button>
+         <img class="grid-item-1 coffe-img border circle" src="./img/coffe.jpg" alt="coffequehacemos">
             </div>
-            <button id="cheaperbtn">Menor precio</button>
-            <div>Monto maximo:</div>
-            <div>Monto minimo:</div>
-    </aside>
-    <div>
-        <h2 class="center">Para la compra de los siguientes productos comunicarse a nuestros medios de contacto 
-            <a href=#>No disponible</a></h2>
-    </div>
-    <footer class="center">
-        <p>Galeria de Productos - Store desconocida - Proyecto JavaScript - CoderHouse 2021 - Lucas Sarlija</p>
-    </footer>
-    <script src="index.js"></script>
+         <p class="FormText grid-item-2">Nos especializamos en la realizacion de cafes con baristas de primera calidad, tambien, brindamos un excelente acompañamiento como tostados de calidad o porciones de tortas a eleccion, tambien, ofrecemos cursos de libre inscripcion y gratuitos dos veces al año, para poder capacitar a mas gente en un gran oficio conocido en todo el mundo. <a class="hover" href="pages/somos.html">¡Conocenos un poquito mas!.</a> Tambien podes conocer algunos beneficios adicionales <a class="hover" href="pages/beneficios.html"> ¡clickeando aqui!. </a></p>
+        </section>
+       <div class="grid-main center">
+            <aside class="item2">
+                <h2 class="form-newsl">¿Donde Estamos?</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <line x1="18" y1="6" x2="18" y2="6.01" />
+                    <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
+                    <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
+                    <line x1="9" y1="4" x2="9" y2="17" />
+                    <line x1="15" y1="15" x2="15" y2="20" />
+                </svg>
+                <p class="FormText">Avenida siempre viva 111 - Buenos Aires - Zona Oeste - Moron - CP 1717</p>
+                <div>
+                <img class="border api-google" src="./img/apigoogle.jpg" alt="api-google"> <!--Puse una imagen por que desconozco como funciona colocar una API real-->
+                </div>
+            </aside>
+            <section class="item3 form-newsl">
+                <h3 class="center item3-title">¡Inscribite a nuestro NewSletter!.</h3>
+                    <form class="newsl">
+                        <fieldset class="field-index">
+                            <legend>¡Sumate a nuestro NewSletter rellenando los siguientes datos!</legend>
+                                <div class="newsl2">
+                                    <div>
+                                    <label class="FormText label-nombre" for="nombr">Nombre</label>
+                                    <input class="label-nombre" name="nombr" type="text" placeholder="Tu Nombre">
+                                    </div>
+                                    <div>
+                                    <label class="FormText label-correo" for="mails">Correo</label>
+                                    <input class="label-correo" name="mails" type="email" placeholder="Email"> 
+                                    </div>
+                                    <input type="submit" value="¡Suscribirse!">
+                                </div>
+                        </fieldset>
+                    </form>
+                
+            </section>
+      </div> 
+        <footer class="border">
+            <p class="FormText center">Lucas Sarlija - Curso Desarrollo Web Coderhouse - 2021 - Fake Page</p>
+        </footer>
 </body>
-
 </html>

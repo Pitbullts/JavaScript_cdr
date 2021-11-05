@@ -1,0 +1,85 @@
+/* NavBar  ----RESPONSIVE------ */ 
+
+@media (min-width: 1280px) {
+    .NavPrincipal {
+        flex-direction: row;
+        justify-content: space-between;    
+    } 
+}
+
+@media (max-width: 1279px) {
+    .NavPrincipal {
+        flex-direction: column;
+        justify-content: space-between;    
+    } 
+}
+
+
+/* Contenido ITEM 1  ¿Que hacemos? - Index ----RESPONSIVE------*/ 
+@media (min-width: 1280px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+    .griditem1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    .grid-item-2 {
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        font-size: 3rem;
+    }
+}
+
+/* Contenido ITEM2 & ITEM3 - Index  ----RESPONSIVE------ */
+@media (max-width: 768px) {
+    .gridmain {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .api-google {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+/* Responsive Page Somos */
+
+@media (max-width: 1280px) {
+    .contentsomos {
+        display: flex;
+        flex-direction: column;
+    } 
+}
+
+@media (max-width: 900px) {
+    .ImgPersonas,.izqsomosimg {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    } 
+}
+    .derecha-responsive {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    @media (min-width: 901px) {
+        .ImgPersonas {
+            width: 100%;
+            height: aut;
+            object-fit: contain;
+        } 
+    }
+
+    /* PopUp */
+    @media (max-width: 395px) {
+            .popup {
+                width: 100%;
+                height: auto;
+            }
+    }
