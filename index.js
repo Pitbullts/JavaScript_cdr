@@ -7,7 +7,8 @@ const productos = [
   { id: 5, producto: "Core I5 10400", precio: 22100 },
   { id: 6, producto: "Core I7 10700", precio: 48500 },
 ];
-/* let sumaID = productos.length + 1;
+/* 
+let sumaID = productos.length + 1;
 let newProduct = prompt("Añade un nuevo producto");
 let PriceNewProduct = parseInt(prompt("Añade un precio a " + newProduct));
 let ArrayNew = productos.push({
@@ -23,19 +24,24 @@ alert("Total de productos: " + sumaID);
 
 const mostrarProductos = () => {
   for (const producto of productos) {
-    let contenedor = document.createElement("div");
+    let contenedor = document.createElement("tr");
     contenedor.innerHTML =
-      `
-                  <tr>
-                  <td class="card card-body card-title FormText">${producto.producto}</td>
-                  <td class="card card-body card-title FormText">ID: ${producto.id}</td>
-                  <td class="card card-body card-title FormText"><b>$ ${producto.precio}</b></td>
-                  <a href="#" class="btn btn-primary" onclick=obtenerCantidadProductosComprados(${producto.id})>Comprar</a>
+      `     
+
+
+
+                  <td class="card-title">${producto.producto}</td>
+                  <td class="card-text">ID: ${producto.id}</td>
+                  <td class="card-text"><b>$ ${producto.precio}</b></td>
                   </tr>
+
+
+
+
              
       `
 
-
+// <a href="#" class="btn btn-primary" onclick=obtenerCantidadProductosComprados(${producto.id})>Comprar</a>
     document.getElementById('fila').appendChild(contenedor);
 
   }

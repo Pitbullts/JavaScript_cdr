@@ -361,5 +361,11 @@ html {
 body {
   /* 1 rem = 10px */
   font-size: 16px;
-  background-color: var(--oscuro);
+  background-color: var(--oscuro); 
   font-family: 'Oswald', sans-serif; }
+
+
+  .card {
+    color: var(--blanco); 
+  }
+  
