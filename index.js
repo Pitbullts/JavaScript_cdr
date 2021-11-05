@@ -26,14 +26,12 @@ const mostrarProductos = () => {
     let contenedor = document.createElement("div");
     contenedor.innerHTML =
       `
-          <div class="card">
-              <div class="card-body">
-                  <h5 class="card-title">${producto.producto}</h5>
-                  <p class="card-text">ID: ${producto.id}</p>
-                  <p class="card-text"><b>$ ${producto.precio}</b></p>
+                  <tr>
+                  <td class="card card-body card-title FormText">${producto.producto}</td>
+                  <td class="card card-body card-title FormText">ID: ${producto.id}</td>
+                  <td class="card card-body card-title FormText"><b>$ ${producto.precio}</b></td>
                   <a href="#" class="btn btn-primary" onclick=obtenerCantidadProductosComprados(${producto.id})>Comprar</a>
-              </div>
-          </div>
+                  </tr>
              
       `
 
