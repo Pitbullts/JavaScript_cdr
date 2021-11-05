@@ -41,7 +41,7 @@ const mostrarProductos = () => {
              
       `
 
-// <a href="#" class="btn btn-primary" onclick=obtenerCantidadProductosComprados(${producto.id})>Comprar</a>
+    // <a href="#" class="btn btn-primary" onclick=obtenerCantidadProductosComprados(${producto.id})>Comprar</a>
     document.getElementById('fila').appendChild(contenedor);
 
   }
@@ -69,65 +69,65 @@ const mostrarProductos = () => {
 // Nota para mañana: falta que se pinte el html denuevo
 
 // ------------- Filtrar Mayor Precio ---------------
-      function respuestaClickExpensive() {
-        fila.innerHTML = ''
-        let productosordenados = productos.sort((a, b) => {
-          if (a.precio > b.precio) {
-            return -1;
-          }
-          if (a.precio < b.precio) {
-            return 1;
-          }
-          return 0;
-        });
+function respuestaClickExpensive() {
+  fila.innerHTML = ''
+  let productosordenados = productos.sort((a, b) => {
+    if (a.precio > b.precio) {
+      return -1;
+    }
+    if (a.precio < b.precio) {
+      return 1;
+    }
+    return 0;
+  });
 
-        return (productosordenados);
+  return (productosordenados);
 
-      }
-
-
-      
-      function filterMoreExpensive() {
-        respuestaClickExpensive();
-        mostrarProductos();
-      }
-
-
-      // ------------- Filtrar - Menor Precio ---------------
-
-      function respuestaClickCheaper() {
-        fila.innerHTML = ''
-        let productosordenados = productos.sort((a, b) => {
-          if (a.precio < b.precio) {
-            return -1;
-          }
-          if (a.precio > b.precio) {
-            return 1;
-          }
-          return 0;
-        });
-
-        return (productosordenados);
-
-      }
+}
 
 
 
-      function filterCheaper() {
-        respuestaClickCheaper();
-        mostrarProductos();
-      }
+function filterMoreExpensive() {
+  respuestaClickExpensive();
+  mostrarProductos();
+}
 
-      // -------------------------------------- Carga de Botones de filtrado entre otros.
-      window.onload = function () {
-        
-        // ------------------------------- Filtrar mas caro    
-        let btnExpensive = document.getElementById("expensivebtn")
-        btnExpensive.addEventListener("click", filterMoreExpensive, true);
-        //-------------------------------- Filtrar mas barato
-        mostrarProductos();
-        let cheaper = document.getElementById("cheaperbtn")
-        cheaper.addEventListener("click", filterCheaper, true);
-        
-      };
+
+// ------------- Filtrar - Menor Precio ---------------
+
+function respuestaClickCheaper() {
+  fila.innerHTML = ''
+  let productosordenados = productos.sort((a, b) => {
+    if (a.precio < b.precio) {
+      return -1;
+    }
+    if (a.precio > b.precio) {
+      return 1;
+    }
+    return 0;
+  });
+
+  return (productosordenados);
+
+}
+
+
+
+function filterCheaper() {
+  respuestaClickCheaper();
+  mostrarProductos();
+}
+
+// -------------------------------------- Carga de Botones de filtrado entre otros.
+window.onload = function () {
+
+  // ------------------------------- Filtrar mas caro    
+  let btnExpensive = document.getElementById("expensivebtn")
+  btnExpensive.addEventListener("click", filterMoreExpensive, true);
+  //-------------------------------- Filtrar mas barato
+  mostrarProductos();
+  let cheaper = document.getElementById("cheaperbtn")
+  cheaper.addEventListener("click", filterCheaper, true);
+
+};
 //----------------------------------------------
