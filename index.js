@@ -130,4 +130,4 @@ window.onload = function () {
   cheaper.addEventListener("click", filterCheaper, true);
 
 };
-//----------------------------------------------deadasd
+//----------------------------------------------
