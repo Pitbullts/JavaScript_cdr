@@ -28,4 +28,4 @@ This repository was created for the delivery of a CoderHouse Project, where I ha
 
 I hope you like it and I am open to new criticisms and improvements on the Web:
 
-Note: The errors bring the .htaccess in case they want to be deployed on a server with Apache.
+Note: The errors bring the .htaccess in case they want to be deployed on a server with Apache. ok
