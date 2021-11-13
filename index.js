@@ -100,7 +100,7 @@ window.onload = function () {
 
   // ------------------------------- Filtrar mas caro    /--------Jquery Nueva actividad- Cambie de JS a Jquery los botones--------
  $('#expensivebtn').on("click", filterMoreExpensive);
-  //-------------------------------- Filtrar mas barato /---------Jquery Nueva actividad- Cambie de JS a Jquery los botones -- use otra forma a la de arriba para probar :)--------
+  //-------------------------------- Filtrar mas barato /---------Jquery Nueva actividad- Cambie de JS a Jquery los botones -- use otra forma a la de arriba para probar :)s--------
   mostrarProductos();
  $('#cheaperbtn').click((e) =>  {
    filterCheaper();
