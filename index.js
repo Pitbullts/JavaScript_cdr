@@ -121,14 +121,11 @@ function filterCheaper() {
 // -------------------------------------- Carga de Botones de filtrado entre otros.
 window.onload = function () {
 
-  // ------------------------------- Filtrar mas caro    
-  let btnExpensive = document.getElementById("expensivebtn")
-  btnExpensive.addEventListener("click", filterMoreExpensive, true);
-  //-------------------------------- Filtrar mas barato
+  // ------------------------------- Filtrar mas caro    /--------Jquery Nueva actividad- Cambie de JS a Jquery los botones--------
+ $('#expensivebtn').on("click", filterMoreExpensive);
+  //-------------------------------- Filtrar mas barato /---------Jquery Nueva actividad- Cambie de JS a Jquery los botones--------
   mostrarProductos();
-  let cheaper = document.getElementById("cheaperbtn")
-  cheaper.addEventListener("click", filterCheaper, true);
-
+  $('#cheaperbtn').on("click", filterCheaper)
 };
 //----------------------------------------------
 
