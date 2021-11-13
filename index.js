@@ -41,33 +41,10 @@ const mostrarProductos = () => {
              
       `
 
-    // <a href="#" class="btn btn-primary" onclick=obtenerCantidadProductosComprados(${producto.id})>Comprar</a>
     document.getElementById('fila').appendChild(contenedor);
 
   }
 }
-
-// Codigo a reformar para cambiar a dom y sort para la entrega anterior
-
-// let container = document.createElement("div");
-/* for (const producto of productos) {
-  // alert(producto.id + div + producto.producto + div + producto.precio);
-    container.innerHTML =   <h3> ID: ${producto.id}</h3>
-                            <p> Producto: ${producto.producto}</p>,
-                            <b>$ ${producto.precio}</b>;
-    document.body.appendChild(container);
-}
-
-        let MaxPrice = parseInt(prompt("Inserte el precio maximo"));
-        const MaxPriceFilter = productos.sort(
-          (producto) => producto.precio < MaxPrice
-        );
-        for (producto of MaxPriceFilter) {
-          alert(producto.id + div + producto.producto + div + producto.precio);
-        }
-*/
-// Nota para mañana: falta que se pinte el html denuevo
-
 // ------------- Filtrar Mayor Precio ---------------
 function respuestaClickExpensive() {
   fila.innerHTML = ''
@@ -125,7 +102,7 @@ window.onload = function () {
  $('#expensivebtn').on("click", filterMoreExpensive);
   //-------------------------------- Filtrar mas barato /---------Jquery Nueva actividad- Cambie de JS a Jquery los botones--------
   mostrarProductos();
-  $('#cheaperbtn').on("click", filterCheaper)
+  $('#cheaperbtn').on("click", filterCheaper);
 };
 //----------------------------------------------
 
