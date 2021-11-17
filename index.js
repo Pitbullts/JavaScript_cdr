@@ -44,6 +44,7 @@ const mostrarProductos = () => {
     document.getElementById('fila').appendChild(contenedor);
 
   }
+  
 }
 // ------------- Filtrar Mayor Precio ---------------
 function respuestaClickExpensive() {
@@ -66,6 +67,7 @@ function respuestaClickExpensive() {
 
 function filterMoreExpensive() {
   respuestaClickExpensive();
+  disaparece();
   mostrarProductos();
 }
 
@@ -92,6 +94,7 @@ function respuestaClickCheaper() {
 
 function filterCheaper() {
   respuestaClickCheaper();
+
   mostrarProductos();
 }
 
@@ -99,11 +102,28 @@ function filterCheaper() {
 window.onload = function () {
 
   // ------------------------------- Filtrar mas caro    /--------Jquery Nueva actividad- Cambie de JS a Jquery los botones--------
- $('#expensivebtn').on("click", filterMoreExpensive);
+//  $('#expensivebtn').on("click", filterMoreExpensive);
+
+
+ $("#expensivebtn").click((e) =>  {
+  filterMoreExpensive();
+    $("#expensivebtn").click(() => {
+        $("#tableProduct").slideUp("fast");
+    }
+    )
+}
+) 
+
   //-------------------------------- Filtrar mas barato /---------Jquery Nueva actividad- Cambie de JS a Jquery los botones -- use otra forma a la de arriba para probar :)s--------
   mostrarProductos();
  $('#cheaperbtn').click((e) =>  {
    filterCheaper();
+   $( "#div11" ).animate({
+    opacity: 0.75,
+
+  }, 4000, function() {
+    // Animation complete.
+  });
  }
  )
 };
@@ -112,3 +132,40 @@ window.onload = function () {
 //---------Jquery---------
 
 let boton = $('#btnAdd');
+
+$("body").prepend('<button id="btn2btn">Prueba</button>')
+
+$("#btn2btn").click ( ()  => {
+ $("#div133").animate({
+   opacity: '0.5',
+   function() {
+     console.log("final")
+   } 
+ })
+ })
+function disaparece(){
+  $( "#div11" ).animate({
+    opacity: 0.75,
+
+  }, 4000, function() {
+    // Animation complete.
+  });
+}
+
+$( "#randddom" ).click(function() {
+  $( "#div11" ).animate({
+    opacity: 0.75,
+
+  }, fast, function() {
+    // Animation complete.
+  });
+});
+
+$( "#random" ).click(function() {
+  $( "#div11" ).animate({
+    opacity: 0.75,
+
+  }, fast, function() {
+    // Animation complete.
+  });
+});
