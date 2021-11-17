@@ -30,9 +30,9 @@ const mostrarProductos = () => {
 
 
 
-                  <td class="card-title">${producto.producto}</td>
-                  <td class="card-text">ID: ${producto.id}</td>
-                  <td class="card-text"><b>$ ${producto.precio}</b></td>
+                  <td class="card-title productosdesaparece">${producto.producto}</td>
+                  <td class="card-text productosdesaparece">ID: ${producto.id}</td>
+                  <td class="card-text productosdesaparece"><b>$ ${producto.precio}</b></td>
                   </tr>
 
 
@@ -68,11 +68,11 @@ function respuestaClickExpensive() {
 function filterMoreExpensive() {
   $(document).ready(function() {
     setTimeout(function() {
-        $("#div11").fadeOut(200);
+        $(".productosdesaparece").fadeOut(200);
     },200);
  
     setTimeout(function() {
-        $("#div11").fadeIn(1000);
+        $(".productosdesaparece").fadeIn(1000);
     },1500);
 });
   respuestaClickExpensive();
@@ -103,11 +103,11 @@ function respuestaClickCheaper() {
 function filterCheaper() {
   $(document).ready(function() {
     setTimeout(function() {
-        $("#div11").fadeOut(200);
+        $(".productosdesaparece").fadeOut(200);
     },200);
  
     setTimeout(function() {
-        $("#div11").fadeIn(1500);
+        $(".productosdesaparece").fadeIn(1500);
     },2000);
 });
   respuestaClickCheaper();
@@ -130,55 +130,9 @@ window.onload = function () {
   mostrarProductos();
  $('#cheaperbtn').click((e) =>  {
    filterCheaper();
-//   $( "#div11" ).animate({
-  //  opacity: 0.75,
-
-  //}, 4000, function() {
-  //  // Animation complete.
- // }
-  //);
  }
  )
 };
 //----------------------------------------------
 
 //---------Jquery---------
-
-let boton = $('#btnAdd');
-
-$("body").prepend('<button id="btn2btn">Prueba</button>')
-
-$("#btn2btn").click ( ()  => {
- $("#div133").animate({
-   opacity: '0.5',
-   function() {
-     console.log("final")
-   } 
- })
- })
-function disaparece(){
-  $( "#div11" ).animate({
-    opacity: 0.75,
-
-  }, 4000, function() {
-    // Animation complete.
-  });
-}
-
-$( "#randddom" ).click(function() {
-  $( "#div11" ).animate({
-    opacity: 0.75,
-
-  }, fast, function() {
-    // Animation complete.
-  });
-});
-
-$( "#random" ).click(function() {
-  $( "#div11" ).animate({
-    opacity: 0.75,
-
-  }, fast, function() {
-    // Animation complete.
-  });
-});
