@@ -66,8 +66,16 @@ function respuestaClickExpensive() {
 
 
 function filterMoreExpensive() {
+  $(document).ready(function() {
+    setTimeout(function() {
+        $("#div11").fadeOut(200);
+    },200);
+ 
+    setTimeout(function() {
+        $("#div11").fadeIn(1000);
+    },1500);
+});
   respuestaClickExpensive();
-  disaparece();
   mostrarProductos();
 }
 
@@ -93,8 +101,16 @@ function respuestaClickCheaper() {
 
 
 function filterCheaper() {
+  $(document).ready(function() {
+    setTimeout(function() {
+        $("#div11").fadeOut(200);
+    },200);
+ 
+    setTimeout(function() {
+        $("#div11").fadeIn(1500);
+    },2000);
+});
   respuestaClickCheaper();
-
   mostrarProductos();
 }
 
@@ -107,10 +123,6 @@ window.onload = function () {
 
  $("#expensivebtn").click((e) =>  {
   filterMoreExpensive();
-    $("#expensivebtn").click(() => {
-        $("#tableProduct").slideUp("fast");
-    }
-    )
 }
 ) 
 
@@ -118,12 +130,13 @@ window.onload = function () {
   mostrarProductos();
  $('#cheaperbtn').click((e) =>  {
    filterCheaper();
-   $( "#div11" ).animate({
-    opacity: 0.75,
+//   $( "#div11" ).animate({
+  //  opacity: 0.75,
 
-  }, 4000, function() {
-    // Animation complete.
-  });
+  //}, 4000, function() {
+  //  // Animation complete.
+ // }
+  //);
  }
  )
 };
