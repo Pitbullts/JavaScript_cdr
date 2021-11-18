@@ -7,7 +7,8 @@ const productos = [
   { id: 5, producto: "Cafe Cortado", precio: 150 },
   { id: 6, producto: "Cafe Black", precio: 130 },
 ];
-/* 
+
+/*
 let sumaID = productos.length + 1;
 let newProduct = prompt("Añade un nuevo producto");
 let PriceNewProduct = parseInt(prompt("Añade un precio a " + newProduct));
@@ -75,8 +76,8 @@ function filterMoreExpensive() {
         $(".productosdesaparece").fadeIn(1000);
     },1500);
 });
-  respuestaClickExpensive();
-  mostrarProductos();
+
+  timerAfterAnimateExpensive();
 }
 
 
@@ -110,8 +111,7 @@ function filterCheaper() {
         $(".productosdesaparece").fadeIn(1500);
     },2000);
 });
-  respuestaClickCheaper();
-  mostrarProductos();
+  timerAfterAnimateCheaper();
 }
 
 // -------------------------------------- Carga de Botones de filtrado entre otros.
@@ -134,5 +134,20 @@ window.onload = function () {
  )
 };
 //----------------------------------------------
+function timerWait() {
+  let timeWaitMostrar = setTimeout(mostrarProductos, 1500);
+  }
 
+
+function timerAfterAnimateCheaper(){
+  let timeWaitCheap = setTimeout(respuestaClickCheaper, 1000);
+  timerWait();
+
+}
+
+
+function timerAfterAnimateExpensive() { 
+  let timeWaitExpensive = setTimeout(respuestaClickExpensive, 1000);
+  timerWait();
+ }
 //---------Jquery---------
