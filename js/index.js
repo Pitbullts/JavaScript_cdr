@@ -133,7 +133,7 @@
     };
     //---------Jquery--------
     */
-    let carrito = [];
+
 
     $(document).ready(function () {
       console.log("Estamos ready")
@@ -148,23 +148,25 @@
       });
 
         // Carrito
+        let carrito = [];
 
-        $("btnComprar").click(function (e) {
+        $(".btnComprar").click(function (e) {
           let hijos = $(e.target).parent().children();
           console.log(hijos[0].value);
           carrito.push(productos[(hijos[0].value -1)])
           localStorage.setItem("carrito", JSON.stringify(carrito));
+          console.log("funca el btn");
         }
         
         )
 
     }
     );
-total = 0;
+let = total = 0;
       $(document).ready(function() {
         $("#boton").click(function (e) {
           let obtenerProductos = JSON.parse(localStorage.getItem("carrito"))
-          for (const producto of obtenerProductos) {
+          for (const producto in obtenerProductos) {
              total += parseFloat(producto.precio);
              $("#carritos").append( ` <div>
                                       <h3 class="FormText"> Producto: ${producto.producto}</h3>
@@ -173,7 +175,8 @@ total = 0;
 
              );
           }
-          console.log(total);
+
           $("#carritos").append(`<p> Precio Final: $${total}</p>`)
+          console.log(total);
         });
       });
