@@ -133,7 +133,7 @@
     };
     //---------Jquery--------
     */
-
+    let carrito = [];
 
     $(document).ready(function () {
       console.log("Estamos ready")
@@ -148,13 +148,12 @@
       });
 
         // Carrito
-        let carrito = [];
 
         $(".btnComprar").click(function (e) {
           let hijos = $(e.target).parent().children();
           console.log(hijos[0].value);
           carrito.push(productos[(hijos[0].value -1)])
-          localStorage.setItem("carrito", JSON.stringify(carrito));
+          localStorage.setItem("carrito", JSON.stringify(productos));
           console.log("funca el btn");
         }
         
@@ -166,7 +165,7 @@ let = total = 0;
       $(document).ready(function() {
         $("#boton").click(function (e) {
           let obtenerProductos = JSON.parse(localStorage.getItem("carrito"))
-          for (const producto in obtenerProductos) {
+          for (const producto of obtenerProductos) {
              total += parseFloat(producto.precio);
              $("#carritos").append( ` <div>
                                       <h3 class="FormText"> Producto: ${producto.producto}</h3>
@@ -176,7 +175,7 @@ let = total = 0;
              );
           }
 
-          $("#carritos").append(`<p> Precio Final: $${total}</p>`)
+          $("#carritos").append(`<p class="FormText"> Precio Final: $${total}</p>`)
           console.log(total);
         });
       });
