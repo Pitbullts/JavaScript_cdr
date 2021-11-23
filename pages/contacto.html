@@ -61,18 +61,19 @@
     <section class="grid-contact FormText center">
         <h1 class="center TxtMain">¡Contactanos!</h1>
     <div id="formulario">
-        <form action="" method="POST" enctype="text/plain" id="formdata">
+        <form enctype="text/plain" id="formdata">
+            <!-- <form action="" method="POST" enctype="text/plain" id="formdata"> -->
             <fieldset class="border grid-field-set">
                 <h1 class="form-newsl">Datos personales</h1>
                 <div class="contenido-contacto">
                     <label for="nombre" id="nombre">Nombre y Apellido</label>
-                    <input type="text" name="nombre" placeholder="Su Nombre + Apellido" required>
+                    <input type="text" name="dato[]" class="datoInput" placeholder="Su Nombre + Apellido" required>
                     <br>
                     <label for="email" id="email">Correo Electronico</label>
-                    <input for="email" type="mail" placeholder="nombre@ejemplo.com" required>
+                    <input for="email" type="mail"  name="dato[]" class="datoInput" placeholder="nombre@ejemplo.com" required>
                     <br>
                     <label for="numb" id="numb">Numero de contacto</label>
-                    <input for="numb" type="number" placeholder="Su numero de telefono" required>
+                    <input for="numb" type="number"  name="dato[]" class="datoInput" placeholder="Su numero de telefono" required>
                     <div>
                         <fieldset>
                             <legend class="form-newsl">Area de contacto</legend>
@@ -90,8 +91,12 @@
                         <div>
                             <input type="reset" value="Limpiar formulario">
                             <br>
-                            <input type="submit" value="Enviar formulario" id="btn1">
+                            <input  value="Enviar formulario" onclick="viewInput()" id="dataform">
                         </div>
+                    </div>
+
+                    <div id="DivEstado">
+
                     </div>
             </fieldset>
         </div>
@@ -99,9 +104,9 @@
                 <p class="FormText center">Lucas Sarlija - Curso Desarrollo Web Coderhouse & JavaScript - 2021 - Fake
                     Page</p>
 
-                <script src="../js/contacto.js"></script>
+                
                 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
                     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+                    <script src="../js/contacto.js"></script>
 </body>
-
 </html>
