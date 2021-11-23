@@ -8,8 +8,7 @@
       { id: 6, producto: "Cafe Black", precio: 130 },
     ];
 
-    const URLJSON = 'datos.json';
-    
+
    /* let sumaID = productos.length + 1;
     let newProduct = prompt("Añade un nuevo producto");
     let PriceNewProduct = parseInt(prompt("Añade un precio a " + newProduct));
@@ -133,7 +132,6 @@
     };
     //---------Jquery--------
     */
-    let carrito = [];
 
     $(document).ready(function () {
       console.log("Estamos ready")
@@ -148,12 +146,13 @@
       });
 
         // Carrito
+        let carrito = [];
 
         $(".btnComprar").click(function (e) {
           let hijos = $(e.target).parent().children();
           console.log(hijos[0].value);
           carrito.push(productos[(hijos[0].value -1)])
-          localStorage.setItem("carrito", JSON.stringify(productos));
+          localStorage.setItem("carrito", JSON.stringify(carrito));
           console.log("funca el btn");
         }
         
@@ -165,11 +164,13 @@ let = total = 0;
       $(document).ready(function() {
         $("#boton").click(function (e) {
           let obtenerProductos = JSON.parse(localStorage.getItem("carrito"))
-          for (const producto of obtenerProductos) {
-             total += parseFloat(producto.precio);
-             $("#carritos").append( ` <div>
+          for (const producto in obtenerProductos) { 
+            // Si lo cambio a of y en la 155 pongo productos (En vez de carrito), me da la lista y suma de los productos
+            // Si lo cambio a of solo, me tira un error de que no puede leer los ${producto.#}
+            total += parseFloat(producto.precio);
+             $("#carritos").append( `<div>
                                       <h3 class="FormText"> Producto: ${producto.producto}</h3>
-                                      <b class="FormText"> $ ${producto.precio} </b>
+                                      <b class="FormText"> $ ${producto.precio}</b>
                                       </div>`
 
              );
