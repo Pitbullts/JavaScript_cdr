@@ -44,3 +44,19 @@ $("#vaciarCarrito").on("click", () => {
   localStorage.setItem("carrito", JSON.stringify(carrito));
   location.reload();
 });
+
+$(document).ready(function () {
+  $("#pagarCompra").on("click", () => {
+    DesvanecerAnimate();
+  });
+
+  function DesvanecerAnimate() {
+    setTimeout(function () {
+      $("#alertaCompra").fadeIn(1000);
+    }, 200);
+
+    setTimeout(function () {
+      $("#alertaCompra").fadeOut(2500);
+    }, 3000);
+  }
+});

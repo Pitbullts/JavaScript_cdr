@@ -71,18 +71,24 @@
             </nav>
         </div>
     </header>
-    <main class="containerdivcarrito">
+    <main>
+        <div id="alertaCompra">
+            <p class="alert alert-warning d-flex align-items-center" role="alert" >Por el momento esta opcion no se encuentra disponible, ¡Muchas gracias por el intento!</p>
+        </div>
+    <div class="containerdivcarrito">
         <div class="containerdivcarrito">
             <button class="btn btn-danger" type="submit" id="vaciarCarrito">Vaciar Carrito</button>
         </div>
 
-        <div class="d-grid gap-2 containerdivcarrito">
+        <div class="d-grid gap-2 containerdivcarrito FormText">
             <button type="submit" class="btn btn-success btn-lg" id="pagarCompra">Completar Compra</button>
         </div>
+                <div id="carrito" class="FormText"></div>
+
         </div>
         </section>
+    </div>
 
-        <header id="carrito" class="FormText"></header>
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
