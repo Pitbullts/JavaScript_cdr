@@ -1,11 +1,9 @@
 let total = 0;
-
 $(document).ready(function imprimirCarrito() {
-  //Carga todas las Cards cargadas en "carrito" que esta en LocalStorage.
+  //Carga todos los productos del localstorage y sus respectivos botones
   let obtenerProductos = JSON.parse(localStorage.getItem("carrito"));
   for (const producto of obtenerProductos) {
     total += parseFloat(producto.precio * producto.caja);
-    //Por cada producto además de los datos agregamos un botón
     $("#carrito").append(`
             <div class="border" style="width: 18rem;">
                 <div class="">
@@ -32,14 +30,14 @@ $(document).ready(function imprimirCarrito() {
          `);
   } else {
     $("#carrito").append(`
-            <div class=""> No posee productos en el carrito</div>
+            <div class=""> No hay productos en el carrito</div>
         `);
   }
   $("#carrito").fadeIn("5000");
 });
 
 $("#vaciarCarrito").on("click", () => {
-  // vacio el carrito creando un nuevo array "carrito" y subiendolo al localStorage con la misma key.
+  // vacio el carrito creando un nuevo array "carrito" y subiendolo al localStorage.
   const carrito = [];
   localStorage.setItem("carrito", JSON.stringify(carrito));
   location.reload();

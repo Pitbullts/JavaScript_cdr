@@ -23,9 +23,7 @@ const mostrarProductos = () => {
     for (let z of respuesta) {
       productosv2.push(z);
     }
-    //console.log(productosv2);
     for (let x of productosv2) {
-      /* console.log(respuesta); */
       $("#tableProduct").append(`
               <tr>
               <div class="card text-center" style="width: 18rem;" id='btnBorrarCarrito'>
@@ -44,7 +42,6 @@ const mostrarProductos = () => {
     }
     $("#tableProduct").fadeIn("5000");
   });
-
 };
 
 // ------------- Filtrar Mayor Precio ---------------
@@ -131,7 +128,7 @@ $(document).ready(function () {
   $("#expensivebtn").click((e) => {
     filterMoreExpensive();
   });
-  // Este es un carrito que no pude hacer funcionar por que  la linea 140 (variable hijos)
+  // Este es un carrito que no pude hacer funcionar por que  la linea 138 (variable hijos)
   // me devolvia un valor vacio cuando queria que tome la linea de un array de objetos (De usar un array de objetos modifique toda la forma de hacer la tienda y empece a usar un json y hacerlo de otra manera)
   // Carrito
   // let carrito = [];
@@ -177,8 +174,6 @@ $(document).ready(function () {
     });
   });
 */
-
-
 
 let numCart = 0;
 
