@@ -369,3 +369,10 @@ body {
     color: var(--blanco); 
   }
   
+  .containerdivcarrito {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+  }
