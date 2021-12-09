@@ -1,3 +1,4 @@
+// -------------------------------------------------- CARGAR CON LIVE SERVER puestos.html ------------------------------------
 /* 
 // No funcional / Desactivado
 let sumaID = productos.length + 1;
@@ -61,6 +62,7 @@ function respuestaClickExpensive() {
 
   return productosordenados;
 
+    
 }
 
 function filterMoreExpensive() {
