@@ -380,3 +380,7 @@ body {
   #alertaCompra {
     display: none;
   }
+
+  #popOverCarrito {
+    text-align: center;
+  }

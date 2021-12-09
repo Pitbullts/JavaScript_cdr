@@ -24,7 +24,7 @@ const mostrarProductos = () => {
       productosv2.push(z);
     }
     for (let x of productosv2) {
-      $("#tableProduct").append(`
+      $("#fila").append(`
               <tr>
               <div class="card text-center" style="width: 18rem;" id='btnBorrarCarrito'>
 
@@ -40,14 +40,14 @@ const mostrarProductos = () => {
               </tr>
           `);
     }
-    $("#tableProduct").fadeIn("5000");
+    $("#fila").fadeIn("5000");
+    
   });
 };
 
 // ------------- Filtrar Mayor Precio ---------------
 function respuestaClickExpensive() {
-  let cleanProduct = document.getElementById("tableProduct");
-  cleanProduct.innerHTML = "";
+  fila.innerHTML = "";
   let productosordenados = productosv2.sort((a, b) => {
     if (a.precio > b.precio) {
       return -1;
@@ -120,11 +120,12 @@ function timerAfterAnimateExpensive() {
 
 $(document).ready(function () {
   console.log("Estamos ready");
+    mostrarProductos();
   // Botones - Filtrar Mas caro - Mas Barato
   $("#cheaperbtn").click((e) => {
     filterCheaper();
   });
-  mostrarProductos();
+
   $("#expensivebtn").click((e) => {
     filterMoreExpensive();
   });
@@ -186,7 +187,7 @@ const agregarCarrito = (idProd) => {
                 </div>
             `
     );
-    $("#popoverAgregar").css("visibility", "visible").fadeOut("7200");
+    $("#popoverAgregar").css("visibility", "visible").fadeOut("1200");
     numCart = numCart + 1;
     productosv2[idProd].caja = productosv2[idProd].caja + 1;
     //console.log(productosv2[idProd].caja)
@@ -198,7 +199,7 @@ const agregarCarrito = (idProd) => {
                 </div>
             `
     );
-    $("#popoverAgregar").css("visibility", "visible").fadeOut("7200");
+    $("#popoverAgregar").css("visibility", "visible").fadeOut("1200");
     numCart = numCart + 1;
     productosv2[idProd].caja = productosv2[idProd].caja + 1;
     carrito.push(productosv2[idProd]);
