@@ -62,7 +62,7 @@ function respuestaClickExpensive() {
 
   return productosordenados;
 
-    
+
 }
 
 function filterMoreExpensive() {
@@ -132,6 +132,7 @@ $(document).ready(function () {
 
   $("#expensivebtn").click((e) => {
     filterMoreExpensive();
+    
   });
   // Este es un carrito que no pude hacer funcionar por que  la linea 138 (variable hijos)
   // me devolvia un valor vacio cuando queria que tome la linea de un array de objetos (De usar un array de objetos modifique toda la forma de hacer la tienda y empece a usar un json y hacerlo de otra manera)
