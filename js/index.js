@@ -47,7 +47,7 @@ const mostrarProductos = () => {
 
 // ------------- Filtrar Mayor Precio ---------------
 function respuestaClickExpensive() {
-  fila.innerHTML = "";
+  $("#fila").html('');
   let productosordenados = productosv2.sort((a, b) => {
     if (a.precio > b.precio) {
       return -1;
@@ -59,6 +59,7 @@ function respuestaClickExpensive() {
   });
 
   return productosordenados;
+
 }
 
 function filterMoreExpensive() {
