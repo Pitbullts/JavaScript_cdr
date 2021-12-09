@@ -46,6 +46,7 @@ const mostrarProductos = () => {
 };
 
 // ------------- Filtrar Mayor Precio ---------------
+// Desde que rehice el carrito estoy luchando para que se limpie el DOM de mostrarproductos y se cargue nuevamente ordenado (a si lo hacia antes)
 function respuestaClickExpensive() {
   $("#fila").html('');
   let productosordenados = productosv2.sort((a, b) => {
