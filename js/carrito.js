@@ -1,12 +1,12 @@
 let total = 0;
 
 $(document).ready(function imprimirCarrito() {
-    //Carga todas las Cards cargadas en "carrito" que esta en LocalStorage.
-    let obtenerProductos = JSON.parse(localStorage.getItem("carrito"));
-    for (const producto of obtenerProductos) {
-        total += parseFloat(producto.precio * producto.caja);
-        //Por cada producto además de los datos agregamos un botón 
-        $('#carrito').append(`
+  //Carga todas las Cards cargadas en "carrito" que esta en LocalStorage.
+  let obtenerProductos = JSON.parse(localStorage.getItem("carrito"));
+  for (const producto of obtenerProductos) {
+    total += parseFloat(producto.precio * producto.caja);
+    //Por cada producto además de los datos agregamos un botón
+    $("#carrito").append(`
             <div class="border" style="width: 18rem;">
                 <div class="">
                     <input type="hidden" id="idProd" value="${producto.id}">
@@ -16,9 +16,9 @@ $(document).ready(function imprimirCarrito() {
                 </div>
             </div>
         `);
-    }
-    if (obtenerProductos != ""){
-        $("#carrito").append(`
+  }
+  if (obtenerProductos != "") {
+    $("#carrito").append(`
             <div class="">
                 <div class="">
                     Total a Pagar:
@@ -30,18 +30,17 @@ $(document).ready(function imprimirCarrito() {
                 </div>
             </div>
          `);
-    }
-    else{
-        $('#carrito').append(`
+  } else {
+    $("#carrito").append(`
             <div class=""> No posee productos en el carrito</div>
         `);
-    };
-    $('#carrito').fadeIn('5000');
+  }
+  $("#carrito").fadeIn("5000");
 });
 
-$('#vaciarCarrito').on('click', () =>{ // vacio el carrito creando un nuevo array "carrito" y subiendolo al localStorage con la misma key.
-    const carrito = [];
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-    location.reload();
+$("#vaciarCarrito").on("click", () => {
+  // vacio el carrito creando un nuevo array "carrito" y subiendolo al localStorage con la misma key.
+  const carrito = [];
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+  location.reload();
 });
-

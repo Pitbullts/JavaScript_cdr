@@ -1,13 +1,12 @@
 const div = ": ";
 const productos = [
-  { id: 1, producto: "Cafe Americano", precio: 190,},
+  { id: 1, producto: "Cafe Americano", precio: 190 },
   { id: 2, producto: "Cafe Expresso", precio: 160 },
   { id: 3, producto: "Cafe Latte", precio: 200 },
   { id: 4, producto: "Cafe Cappuccino", precio: 160 },
   { id: 5, producto: "Cafe Cortado", precio: 150 },
   { id: 6, producto: "Cafe Black", precio: 130 },
 ];
-
 
 /* let sumaID = productos.length + 1;
 let newProduct = prompt("Añade un nuevo producto");
@@ -22,11 +21,7 @@ alert("Lista de productos:");
 alert("Total de productos: " + sumaID);
 
 */
-window.onload = function () { 
-
-
-  
-}
+window.onload = function () {};
 
 // ------------- Filtrar Mayor Precio ---------------
 function respuestaClickExpensive() {
@@ -119,14 +114,14 @@ window.onload = function () {
 */
 
 const mostrarProductos = () => {
-  $.getJSON(URLJSON,(respuesta) => {
-      for (let z of respuesta){
-          productosv2.push(z);
-      }
-      //console.log(productosv2);
-      for (let x of productosv2){
-          /* console.log(respuesta); */
-          $('#tableProduct').append(`
+  $.getJSON(URLJSON, (respuesta) => {
+    for (let z of respuesta) {
+      productosv2.push(z);
+    }
+    //console.log(productosv2);
+    for (let x of productosv2) {
+      /* console.log(respuesta); */
+      $("#tableProduct").append(`
               <tr>
               <div class="card text-center" style="width: 18rem;" id='btnBorrarCarrito'>
 
@@ -141,24 +136,15 @@ const mostrarProductos = () => {
               </div>
               </tr>
           `);
-      }
-      $('#tableProduct').fadeIn('5000');
-  })
-
+    }
+    $("#tableProduct").fadeIn("5000");
+  });
 };
 
-
 $(document).ready(function () {
-
-
-
-
-
-
-
   // casdasdasdasdasd
-  console.log("Estamos ready")
-          // ------------------------------- Filtrar mas caro    /--------Jquery Nueva actividad- Cambie de JS a Jquery los botones--------
+  console.log("Estamos ready");
+  // ------------------------------- Filtrar mas caro    /--------Jquery Nueva actividad- Cambie de JS a Jquery los botones--------
   $("#expensivebtn").click((e) => {
     filterMoreExpensive();
   });
@@ -168,10 +154,10 @@ $(document).ready(function () {
     filterCheaper();
   });
 
-    // Carrito
-    let carrito = [];
+  // Carrito 
+  // let carrito = [];
 
-    /* $(".btnComprar").click(function (e) {
+  /* $(".btnComprar").click(function (e) {
       let hijos = $("#tomarProducto").parent().children();
       
       let valName = $(".valNombre").parent().val();
@@ -190,8 +176,7 @@ $(document).ready(function () {
     
     )
       */
-}
-);
+});
 /* let = total = 0;
   $(document).ready(function() {
     $("#boton").click(function (e) {
@@ -214,43 +199,40 @@ $(document).ready(function () {
   });
 */
 
-  const URLJSON = '../pages/datos/datos.json';
+const URLJSON = "../pages/datos/datos.json";
 const productosv2 = [];
 const carrito = [];
 
 let numCart = 0;
 
 const agregarCarrito = (idProd) => {
-    if(carrito.some(elemento => elemento == productosv2[idProd])){
-        $('#popOverCarrito').prepend(
-            `
+  if (carrito.some((elemento) => elemento == productosv2[idProd])) {
+    $("#popOverCarrito").prepend(
+      `
                 <div id="popoverAgregar" style="display: block" style="hidden">
                     Se sumo al carrito
                 </div>
             `
-        )
-        $('#popoverAgregar').css('visibility','visible')
-                            .fadeOut('7200');
-        numCart = numCart + 1; 
-        productosv2[idProd].caja = productosv2[idProd].caja + 1;
-        //console.log(productosv2[idProd].caja)
-    }
-    else{
-        $('#popOverCarrito').prepend(
-            `
+    );
+    $("#popoverAgregar").css("visibility", "visible").fadeOut("7200");
+    numCart = numCart + 1;
+    productosv2[idProd].caja = productosv2[idProd].caja + 1;
+    //console.log(productosv2[idProd].caja)
+  } else {
+    $("#popOverCarrito").prepend(
+      `
                 <div id="popoverAgregar" style="display: block" style="hidden">
                     Se sumo al carrito
                 </div>
             `
-        )
-        $('#popoverAgregar').css('visibility','visible')
-                            .fadeOut('7200');
-        numCart = numCart + 1;
-        productosv2[idProd].caja = productosv2[idProd].caja + 1;
-        carrito.push(productosv2[idProd]);
-    }
-    //carrito.push(productosv2[idProd]);
-    $('#carrito_cantidad').html(`${numCart}`);
-    //console.log(carrito);
-    localStorage.setItem("carrito", JSON.stringify(carrito));
+    );
+    $("#popoverAgregar").css("visibility", "visible").fadeOut("7200");
+    numCart = numCart + 1;
+    productosv2[idProd].caja = productosv2[idProd].caja + 1;
+    carrito.push(productosv2[idProd]);
+  }
+  //carrito.push(productosv2[idProd]);
+  $("#carrito_cantidad").html(`${numCart}`);
+  //console.log(carrito);
+  localStorage.setItem("carrito", JSON.stringify(carrito));
 };

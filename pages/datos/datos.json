@@ -1,9 +1,50 @@
-[   
-  { "id": 1, "producto": "Cafe Americano", "precio": 190, "descripcion": "Cafe Negro, sin Leche y/o otro elemento", "stock": "full", "imagen": "null", "caja": 0},
-  { "id": 2, "producto": "Cafe Expresso", "precio": 160, "descripcion": "Cafe Negro, sin Leche y/o otro elemento", "stock": "full", "imagen": "none", "caja": 0 },
-  { "id": 3, "producto": "Cafe Latte", "precio": 200, "descripcion": "Cafe Negro, sin Leche y/o otro elemento", "stock": "full", "imagen": "none", "caja": 0 },
-  { "id": 4, "producto": "Cafe Cappuccino", "precio": 160, "descripcion": "Cafe Negro, sin Leche y/o otro elemento", "stock": "full", "imagen": "none", "caja": 0 },
-  { "id": 5, "producto": "Cafe Cortado", "precio": 150, "descripcion": "Cafe Negro, sin Leche y/o otro elemento", "stock": "full", "imagen": "none", "caja": 0 },
-  { "id": 6, "producto": "Cafe Black", "precio": 130, "descripcion": "Cafe Negro, sin Leche y/o otro elemento", "stock": "full", "imagen": "none", "caja": 0 }
-  
+[
+  {
+    "id": 0,
+    "producto": "Cafe Americano",
+    "precio": 190,
+    "stock": "full",
+    "imagen": "null",
+    "caja": 0
+  },
+  {
+    "id": 1,
+    "producto": "Cafe Expresso",
+    "precio": 160,
+    "stock": "full",
+    "imagen": "none",
+    "caja": 0
+  },
+  {
+    "id": 2,
+    "producto": "Cafe Latte",
+    "precio": 200,
+    "stock": "full",
+    "imagen": "none",
+    "caja": 0
+  },
+  {
+    "id": 3,
+    "producto": "Cafe Cappuccino",
+    "precio": 160,
+    "stock": "full",
+    "imagen": "none",
+    "caja": 0
+  },
+  {
+    "id": 4,
+    "producto": "Cafe Cortado",
+    "precio": 150,
+    "stock": "full",
+    "imagen": "none",
+    "caja": 0
+  },
+  {
+    "id": 5,
+    "producto": "Cafe Black",
+    "precio": 130,
+    "stock": "full",
+    "imagen": "none",
+    "caja": 0
+  }
 ]
