@@ -48,6 +48,7 @@ const mostrarProductos = () => {
 
 // ------------- Filtrar Mayor Precio ---------------
 // Desde que rehice el carrito estoy luchando para que se limpie el DOM de mostrarproductos y se cargue nuevamente ordenado (a si lo hacia antes)
+// Funciona correctamente el agregado de productos al carrito si no lo filtras (Si encontras una solucion, por favor comentamela :/ ), utilizante array de objetos sin llamar a ningun json funcionaba correctamente.
 function respuestaClickExpensive() {
   $("#fila").html('');
   let productosordenados = productosv2.sort((a, b) => {

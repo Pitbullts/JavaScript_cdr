@@ -24,7 +24,7 @@ $(document).ready(function imprimirCarrito() {
                 <div class="">
                     <h5 class="">Precio final</h5>
                     <p class="">$${total}</p>
-                    <button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Pagar</button>
+                    <button class="btn btn-success pagarCarrito" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Pagar</button>
                 </div>
             </div>
          `);
@@ -45,6 +45,11 @@ $("#vaciarCarrito").on("click", () => {
 
 $(document).ready(function () {
   $("#pagarCompra").on("click", () => {
+    DesvanecerAnimate();
+  });
+
+  
+  $(".pagarCarrito").on("click", () => {
     DesvanecerAnimate();
   });
 
