@@ -49,7 +49,19 @@ $(document).ready(function () {
   });
 
   
-  $(".pagarCarrito").on("click", () => {
+  $("#pagarCarrito").on("click", () => {
+    let nombreApellido = $('#nombreApellido').val();
+    let telefonoCheck = $('#telefonoCheck').val();
+    let emailCheck = $('#emailCheck').val();
+    
+    if ((nombreApellido == '') || (telefonoCheck == '') || (emailCheck == '')){
+        alert('Complete Todos los campos')
+    }
+    else{
+        let obtenerProductos = [];
+        localStorage.setItem("carrito",JSON.stringify(obtenerProductos))
+        location.reload();
+    }  
     DesvanecerAnimate();
   });
 
@@ -63,3 +75,4 @@ $(document).ready(function () {
     }, 3000);
   }
 });
+

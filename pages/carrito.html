@@ -78,17 +78,24 @@
     <div class="containerdivcarrito">
         <div class="containerdivcarrito">
             <button class="btn btn-danger" type="submit" id="vaciarCarrito">Vaciar Carrito</button>
+            <button type="submit" class="btn btn-success btn-lg" id="pagarCarrito">Completar Compra</button>
         </div>
 
-        <div class="d-grid gap-2 containerdivcarrito FormText">
-            <button type="submit" class="btn btn-success btn-lg" id="pagarCompra">Completar Compra</button>
-        </div>
+
                 <div id="carrito" class="FormText"></div>
 
         </div>
         </section>
     </div>
-
+    <div class="FormText">
+        <p>Nombre y Apellido</p>
+        <input type="text" id="nombreApellido">
+        <div class="Tarjeta">
+            <p>Correo electronico</p>
+            <input type="email" id="emailCheck">
+            <p>Numero de telefono</p> <input type="number" id="telefonoCheck">
+        </div>
+    </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>

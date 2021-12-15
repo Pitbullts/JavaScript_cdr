@@ -18,6 +18,7 @@ alert("Total de productos: " + sumaID);
 const URLJSON = "../pages/datos/datos.json";
 const productosv2 = [];
 const carrito = [];
+let fila = document.getElementById("fila");
 
 const mostrarProductos = () => {
   $.getJSON(URLJSON, (respuesta) => {
@@ -26,7 +27,7 @@ const mostrarProductos = () => {
     }
     for (let x of productosv2) {
       $("#fila").append(`
-              <tr>
+              <tr class="deleteProductos">
               <div class="card text-center" style="width: 18rem;" id='btnBorrarCarrito'>
 
                   <div class="card-body">
@@ -49,8 +50,11 @@ const mostrarProductos = () => {
 // ------------- Filtrar Mayor Precio ---------------
 // Desde que rehice el carrito estoy luchando para que se limpie el DOM de mostrarproductos y se cargue nuevamente ordenado (a si lo hacia antes)
 // Funciona correctamente el agregado de productos al carrito si no lo filtras (Si encontras una solucion, por favor comentamela :/ ), utilizante array de objetos sin llamar a ningun json funcionaba correctamente.
-function respuestaClickExpensive() {
-  $("#fila").html('');
+// El problema es que toma el contenido del json y cuando lo filtra muestra el json + el filtrado + si le das denuevo
+function respuestaClickExpensive() { 
+  fila.replaceChildren(); 
+
+
   let productosordenados = productosv2.sort((a, b) => {
     if (a.precio > b.precio) {
       return -1;
@@ -125,17 +129,17 @@ function timerAfterAnimateExpensive() {
 
 $(document).ready(function () {
   console.log("Estamos ready");
-    mostrarProductos();
+
   // Botones - Filtrar Mas caro - Mas Barato
   $("#cheaperbtn").click((e) => {
     filterCheaper();
   });
-
+    mostrarProductos();
   $("#expensivebtn").click((e) => {
     filterMoreExpensive();
-    
+    fila.replaceChildren();
   });
-  // Este es un carrito que no pude hacer funcionar por que  la linea 138 (variable hijos)
+  // Este es un carrito que no pude hacer funcionar por que  la linea 145 (variable hijos)
   // me devolvia un valor vacio cuando queria que tome la linea de un array de objetos (De usar un array de objetos modifique toda la forma de hacer la tienda y empece a usar un json y hacerlo de otra manera)
   // Carrito
   // let carrito = [];
