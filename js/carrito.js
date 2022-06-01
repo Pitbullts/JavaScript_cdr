@@ -60,7 +60,7 @@ $(document).ready(function () {
     else{
         let obtenerProductos = [];
         localStorage.setItem("carrito",JSON.stringify(obtenerProductos))
-        location.reload();
+        location.reload(DesvanecerAnimate);
     }  
     DesvanecerAnimate();
   });

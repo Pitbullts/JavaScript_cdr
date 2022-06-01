@@ -22,26 +22,24 @@ let fila = document.getElementById("fila");
 
 const mostrarProductos = () => {
   $.getJSON(URLJSON, (respuesta) => {
-    for (let z of respuesta) {
-      productosv2.push(z);
-    }
-    for (let x of productosv2) {
+    for (let producto of respuesta) {
+      productosv2.push(producto);
       $("#fila").append(`
               <tr class="deleteProductos">
               <div class="card text-center" style="width: 18rem;" id='btnBorrarCarrito'>
 
                   <div class="card-body">
-                      <input type="hidden" id="idProd" value="${x.id}"> </td>
-                      <td class="card-title" id="${x.id}">${x.producto}</h2> </td>
-                      <td class="card-text">$ ${x.precio}</p></td>
+                      <input type="hidden" id="idProd" value="${producto.id}"> </td>
+                      <td class="card-title" id="${producto.id}">${producto.producto}</h2> </td>
+                      <td class="card-text">$ ${producto.precio}</p></td>
                       <div class="btn-group" role="group" aria-label="Basic mixed styles example">            
-                          <td><button type="button" class="btn btn-success" onclick="agregarCarrito(${x.id})">Agregar</button></td>
+                          <td><button type="button" class="btn btn-success" onclick="agregarCarrito(${producto.id})">Agregar</button></td>
                       </div>
                   </div>
               </div>
               </tr>
           `);
-    }
+        }
     $("#fila").fadeIn("5000");
     
   });
